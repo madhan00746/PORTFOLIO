@@ -1,0 +1,231 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f4f4;
+    color: #222;
+}
+
+/* Small Header */
+header {
+    background: #222;
+    color: white;
+    padding: 12px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    color: #00bcd4;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Home */
+#home {
+    background: #222;
+    color: white;
+    min-height: 280px;
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.content {
+    flex: 1;
+    text-align: left;
+}
+
+.content h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.content h3 {
+    color: #00bcd4;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #ddd;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00bcd4;
+    color: #222;
+    padding: 9px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Photo */
+.image {
+    flex: 0 0 180px;
+    text-align: center;
+}
+
+.image img {
+    width: 165px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #00bcd4;
+}
+
+/* All Sections */
+section:not(#home) {
+    padding: 20px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #008fa1;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+section p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-list span {
+    background: #222;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Projects */
+.project {
+    background: white;
+    padding: 12px;
+    margin: 10px auto;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px #ccc;
+}
+
+.project h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Contact */
+#contact {
+    background: #eaeaea;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 11px;
+}
+
+/* A4 Print Settings */
+@media print {
+    body {
+        width: 210mm;
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    header {
+        padding: 10px 8%;
+    }
+
+    #home {
+        min-height: 0;
+        padding: 25px 8%;
+    }
+
+    section:not(#home) {
+        padding: 15px 8%;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .project {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #home {
+        flex-direction: column-reverse;
+        text-align: left;
+    }
+
+    .image img {
+        width: 145px;
+        height: 165px;
+    }
+}
